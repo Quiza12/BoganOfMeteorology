@@ -1,0 +1,33 @@
+http://www.bom.gov.au/catalogue/data-feeds.shtml
+
+API Endpoint:  http://www.bom.gov.au/fwo/
+
+Short form (précis) forecasts
+
+Précis forecasts (a short summary, less than 30 characters) are available in XML format for all Australian forecast locations.
+
+API
+
+http://www.bom.gov.au/fwo/IDN11060.xml - NSW
+http://www.bom.gov.au/fwo/IDD10207.xml - NT
+http://www.bom.gov.au/fwo/IDQ11295.xml - QLD
+http://www.bom.gov.au/fwo/IDS10044.xml - SA
+http://www.bom.gov.au/fwo/IDT16710.xml - TAS
+http://www.bom.gov.au/fwo/IDV10753.xml - VIC
+http://www.bom.gov.au/fwo/IDW14199.xml - WA
+
+  - Extracting information using script - DONE
+    - Run extractor.js as: node extractor.js {state} {location} - e.g. node extractor.js nsw cronulla
+    - Run location-extractor.js as: node location-extractor.js {state} > locations/{state}.txt - e.g. node locations-extractor.js nsw > locations/nsw.txt
+  - State selection - DONE
+  - Location selection - DONE
+  - Week's forecast printing - DONE
+  - Fix git problems - TODO
+  - Fix low-high-precip for first day - TODO
+  - New service for boganisms - TODO
+
+
+ng serve --open
+
+https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
+https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch/
