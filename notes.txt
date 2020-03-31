@@ -22,9 +22,10 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - State selection - DONE
   - Location selection - DONE
   - Week's forecast printing - DONE
-  - Fix git problems - TODO
-  - Fix low-high-precip for first day - TODO
+  - Fix git problems - DONE
+  - Fix low-high-precip for first day - DONE
   - New service for boganisms - TODO
+  - Styling - centered and bigger buttons/floating boxes - TODO
 
 
 ng serve --open

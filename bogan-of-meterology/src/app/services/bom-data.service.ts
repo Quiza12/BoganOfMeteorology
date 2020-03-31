@@ -36,7 +36,7 @@ export class BomDataService {
   private waResultsArray = [];
 
   private displayDailyForecast: boolean;
-  private displayLocationList: boolean;  
+  private displayLocationList: boolean;
 
   private resultsArray = LocationForecast[''];
 
@@ -98,7 +98,6 @@ export class BomDataService {
         this.getWeeksForecast(areaArray[i], resultsArray);
       }
     }
-    console.log('{State} loaded');
   }
 
   getWeeksForecast(areaArray: any, resultsArray: any) {
@@ -113,12 +112,22 @@ export class BomDataService {
       this.getAirTempAndPrecipRange(forecastArray[i].element, locationForecast);
       this.getPrecisAndPoP(forecastArray[i].text, locationForecast);
 
+      if (i != 0) { //First day is rest of day's forecast - it's an incomplete one.
+        this.getPrettyDate(forecastArray[i].$['start-time-local'], locationForecast);
+        this.getAirTempAndPrecipRange(forecastArray[i].element, locationForecast);
+        this.getPrecisAndPoP(forecastArray[i].text, locationForecast);
+      } else {
+        locationForecast.date = 'Forecast for rest of ' + moment(forecastArray[i].$['start-time-local']).format("dddd");
+        this.getAirTempAndPrecipRange(forecastArray[i].element, locationForecast);
+        this.getPrecisAndPoP(forecastArray[i].text, locationForecast);
+      }
+
       resultsArray.push(locationForecast);
     }
   }
 
-  getPrettyDate(date: any, locationForcast: any) {
-    locationForcast.date = moment(date).format("dddd, D MMMM");
+  getPrettyDate(date: any, locationForecast: any) {
+    locationForecast.date = moment(date).format("dddd, D MMMM");
   }
 
   getAirTempAndPrecipRange(elementsArray: any, locationForcast: any) {
