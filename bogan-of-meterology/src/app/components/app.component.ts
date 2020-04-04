@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BomDataService } from '../services/bom-data.service';
+import { BoganService } from '../services/bogan.service';
 import { LocationForecast } from '../classes/location-forecast';
 
 @Component({
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
   stateOption: any;
   resultsArray = LocationForecast[''];
 
-  constructor(private bomDataService: BomDataService) {
+  constructor(private bomDataService: BomDataService, private boganService: BoganService) {
     this.getDisplayDailyForecastFlag();
     this.getDisplayLocationListFlag();
   }
@@ -68,7 +69,7 @@ export class AppComponent implements OnInit {
   loadSevenDayForecast() {
     console.log('Retrieving information for location: ' + this.chosenLocation);
     switch(this.stateOption) {
-      case 'nsw': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNswResultsForDisplay()); break;
+      case 'nsw': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNswResultsForDisplay())); break;
       case 'qld': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getQldResultsForDisplay()); break;
       case 'nt': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNtResultsForDisplay()); break;
       case 'sa': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getSaResultsForDisplay()); break;
@@ -78,6 +79,10 @@ export class AppComponent implements OnInit {
     }
     this.setDisplayDailyForecastFlag(true);
     this.getDisplayDailyForecastFlag();
+  }
+
+  boganise(resultsArray: any) {
+    return this.boganService.boganise(resultsArray);
   }
 
   getDisplayDailyForecastFlag() {

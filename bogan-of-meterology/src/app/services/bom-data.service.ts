@@ -105,7 +105,7 @@ export class BomDataService {
     for (var i = 0; i < forecastArray.length; i++) {
       let locationForecast = new LocationForecast(
         areaArray.$.description,
-        '', '', '', '', '', ''
+        '', '', '', '', '', '', '', '', '', '', ''
       );
 
       this.getPrettyDate(forecastArray[i].$['start-time-local'], locationForecast);

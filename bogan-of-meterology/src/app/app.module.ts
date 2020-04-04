@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { BomDataService } from './services/bom-data.service';
+import { BoganService } from './services/bogan.service';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { BomDataService } from './services/bom-data.service';
   ],
   providers: [
     BomDataService,
+    BoganService,
     HttpClientModule
   ],
   bootstrap: [

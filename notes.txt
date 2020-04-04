@@ -16,19 +16,24 @@ http://www.bom.gov.au/fwo/IDT16710.xml - TAS
 http://www.bom.gov.au/fwo/IDV10753.xml - VIC
 http://www.bom.gov.au/fwo/IDW14199.xml - WA
 
-  - Extracting information using script - DONE
+  - DONE - Extracting information using script
     - Run extractor.js as: node extractor.js {state} {location} - e.g. node extractor.js nsw cronulla
     - Run location-extractor.js as: node location-extractor.js {state} > locations/{state}.txt - e.g. node locations-extractor.js nsw > locations/nsw.txt
-  - State selection - DONE
-  - Location selection - DONE
-  - Week's forecast printing - DONE
-  - Fix git problems - DONE
-  - Fix low-high-precip for first day - DONE
-  - New service for boganisms - TODO
-  - Styling - centered and bigger buttons/floating boxes - TODO
+  - DONE - State selection.
+  - DONE - Location selection.
+  - DONE - Week's forecast printing.
+  - DONE - Fix git problems.
+  - DONE - Fix low-high-precip for first day.
+  - DONE - New service for boganisms.
+  - DONE - Do chance of rain for POC.
+  - TODO - Expand POC - do randomised option.
+  - TODO - Styling - centered and bigger buttons/floating boxes
 
 
 ng serve --open
 
 https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
 https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch/
+
+
+Select all empty lines to delete: ^(?:[\t ]*(?:\r?\n|\r))+
