@@ -26,7 +26,10 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - Fix low-high-precip for first day.
   - DONE - New service for boganisms.
   - DONE - Do chance of rain for POC.
-  - TODO - Expand POC - do randomised option.
+  - DONE - Expand POC - do randomised option.
+  - TODO - Low and high randomised options.
+  - TODO - Precis POC.
+
   - TODO - Styling - centered and bigger buttons/floating boxes
 
 
@@ -37,3 +40,5 @@ https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch
 
 
 Select all empty lines to delete: ^(?:[\t ]*(?:\r?\n|\r))+
+
+Idea for the search: big search bar with "Where the bloody hell are ya?"

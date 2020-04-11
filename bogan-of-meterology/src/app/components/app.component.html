@@ -42,7 +42,7 @@
 <div>
   <div *ngIf="displayDailyForecast">
     <ul *ngFor="let result of resultsArray">
-      <li>Date: {{result.date}}</li>
+      <li>{{result.date}}</li>
       <li>Summary: {{result.precis}}</li>
       <li>Chance of rain: {{result.pop}} - {{result.boganisedPop}}</li>
       <li>Low: {{result.airTempMin}}</li>

@@ -70,12 +70,12 @@ export class AppComponent implements OnInit {
     console.log('Retrieving information for location: ' + this.chosenLocation);
     switch(this.stateOption) {
       case 'nsw': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNswResultsForDisplay())); break;
-      case 'qld': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getQldResultsForDisplay()); break;
-      case 'nt': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNtResultsForDisplay()); break;
-      case 'sa': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getSaResultsForDisplay()); break;
-      case 'tas': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getTasResultsForDisplay()); break;
-      case 'wa': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getWaResultsForDisplay()); break;
-      case 'vic': this.resultsArray = this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getVicResultsForDisplay()); break;
+      case 'qld': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getQldResultsForDisplay())); break;
+      case 'nt': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getNtResultsForDisplay())); break;
+      case 'sa': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getSaResultsForDisplay())); break;
+      case 'tas': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getTasResultsForDisplay())); break;
+      case 'wa': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getWaResultsForDisplay())); break;
+      case 'vic': this.resultsArray = this.boganise(this.bomDataService.getForecastForLocation(this.chosenLocation, this.bomDataService.getVicResultsForDisplay())) ; break;
     }
     this.setDisplayDailyForecastFlag(true);
     this.getDisplayDailyForecastFlag();
