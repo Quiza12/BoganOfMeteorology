@@ -1,53 +1,43 @@
 <h1>Bogan of Meterology</h1>
 
 <form (change)="stateOptionChange()">
-  <label for="nsw">
-    <input type="radio" id="nsw" [(ngModel)]="stateOption" name="nsw" value="nsw">
-    NSW/ACT
-  </label>
-  <label for="qld">
-    <input type="radio" id="qld" [(ngModel)]="stateOption" name="qld" value="qld">
-    QLD
-  </label>
-  <label for="nt">
-    <input type="radio" id="nt" [(ngModel)]="stateOption" name="nt"value="nt">
-    NT
-  </label>
-  <label for="sa">
-    <input type="radio" id="sa" [(ngModel)]="stateOption" name="sa"value="sa">
-    SA
-  </label>
-  <label for="tas">
-    <input type="radio" id="tas" [(ngModel)]="stateOption" name="tas"value="tas">
-    TAS
-  </label>
-  <label for="wa">
-    <input type="radio" id="wa" [(ngModel)]="stateOption" name="wa"value="wa">
-    WA
-  </label>
-  <label for="vic">
-    <input type="radio" id="vic" [(ngModel)]="stateOption" name="vic"value="vic">
-    VIC
-  </label>
+  <div class="radio-group">
+      <input type="radio" id="nsw" [(ngModel)]="stateOption" name="nsw" value="nsw">
+      <label for="nsw" class="radio-label">NSW/ACT</label>
+      <input type="radio" id="qld" [(ngModel)]="stateOption" name="qld" value="qld">
+      <label for="qld" class="radio-label">QLD</label>
+      <input type="radio" id="nt" [(ngModel)]="stateOption" name="nt"value="nt">
+      <label for="nt" class="radio-label">NT</label>
+      <input type="radio" id="sa" [(ngModel)]="stateOption" name="sa"value="sa">
+      <label for="sa" class="radio-label">SA</label>
+      <input type="radio" id="tas" [(ngModel)]="stateOption" name="tas"value="tas">
+      <label for="tas" class="radio-label">TAS</label>
+      <input type="radio" id="wa" [(ngModel)]="stateOption" name="wa"value="wa">
+      <label for="wa" class="radio-label">WA</label>
+      <input type="radio" id="vic" [(ngModel)]="stateOption" name="vic"value="vic">
+      <label for="vic" class="radio-label">VIC</label>
+  </div>
 </form>
 
 <br />
 
-<div *ngIf="displayLocationList">
-  <select name="locationList" [(ngModel)]="chosenLocation" (change)="loadSevenDayForecast()">
-    <option *ngFor="let location of chosenLocationList">{{location}}</option>
-  </select>
+<div class="select-group">
+  <div *ngIf="displayLocationList">
+    <select class="styled-select" name="locationList" [(ngModel)]="chosenLocation" (change)="loadSevenDayForecast()">
+      <option value="" hidden>Choose town</option>
+      <option *ngFor="let location of chosenLocationList">{{location}}</option>
+    </select>
+  </div>
 </div>
 
 <div>
   <div *ngIf="displayDailyForecast">
-    <ul *ngFor="let result of resultsArray">
+    <ul *ngFor="let result of resultsArray; let i = index">
       <li>{{result.date}}</li>
       <li>Summary: {{result.precis}}</li>
       <li>Chance of rain: {{result.pop}} - {{result.boganisedPop}}</li>
-      <li>Low: {{result.airTempMin}}</li>
-      <li>High: {{result.airTempMax}}</li>
-      <li>Precipitation range: {{result.precipRange}}</li>
+      <li *ngIf="i != 0">Low: {{result.airTempMin}} - {{result.boganisedAirTempMin}}</li>
+      <li *ngIf="i != 0">High: {{result.airTempMax}} - {{result.boganisedAirTempMax}}</li>
     </ul>
   </div>
 

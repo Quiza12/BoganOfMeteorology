@@ -27,16 +27,20 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - New service for boganisms.
   - DONE - Do chance of rain for POC.
   - DONE - Expand POC - do randomised option.
-  - TODO - Low and high randomised options.
+  - DONE - Low and high randomised options - maybe add more later.
   - TODO - Precis POC.
+  - DONE - Styling - state options and page theme.
+  - TODO - Styling - select box.
 
-  - TODO - Styling - centered and bigger buttons/floating boxes
 
+Cheers to:
+  https://codepen.io/magnificode/pen/ojYJJP/
 
 ng serve --open
 
 https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
 https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch/
+http://www.wanowandthen.com/slang.html
 
 
 Select all empty lines to delete: ^(?:[\t ]*(?:\r?\n|\r))+

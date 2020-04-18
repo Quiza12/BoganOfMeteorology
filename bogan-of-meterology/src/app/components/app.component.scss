@@ -1,0 +1,63 @@
+$bg: #332f35;
+$fg: lighten($bg,20%);
+$fg2: lighten($bg,40%);
+$borderWidth: 3px;
+
+h1, li {
+  color: white;
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+// input[type=select] {
+//   position: absolute;
+//   visibility: hidden;
+//   display: none;
+// }
+
+label {
+  color: lighten($bg,40%);
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+input[type=radio]:checked + label{
+  color: lighten($bg,60%);
+  background: $fg;
+}
+
+label + input[type=radio] + label {
+  border-left: solid $borderWidth $fg;
+}
+
+.radio-group {
+  border: solid $borderWidth $fg;
+  display: inline-block;
+  margin: 20px 20px 5px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-select {
+   background: transparent;
+   text-align: center;
+   width: 268px;
+   height: 40px;
+   margin-bottom: 20px;
+   font-size: 16px;
+   line-height: 1;
+   border: solid $borderWidth $fg;
+   border-radius: 10px;
+
+   color: lighten($bg,40%);
+   font-weight: bold;
+   -webkit-appearance: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');

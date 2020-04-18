@@ -1,16 +1,68 @@
-export class PopArrays {
+export class ConstArrays {
   pop1 = [];
   pop2 = [];
   pop3 = [];
   pop4 = [];
   pop5 = [];
 
+  temp1 = [];
+  temp2 = [];
+  temp3 = [];
+  temp4 = [];
+  temp5 = [];
+  temp6 = [];
+  temp7 = [];
+
   constructor() {
+    //0 and under
+    this.temp1 = [
+      'F*cking freezing.',
+      'Christ on a bike.',
+      'Absolutely crook.'
+    ];
+    //between 0 and 7
+    this.temp2 = [
+      'Not nipple friendly.',
+      'Crook.',
+      'Brass monkey weather.'
+    ];
+    //between 8 and 15
+    this.temp3 = [
+      'Bit chilly.',
+      'Crack out the tracky dacks.',
+      'Bit nippy.'
+    ];
+    //between 16 and 23
+    this.temp4 = [
+      'Beaut.',
+      'Ripper.',
+      'Bonza.'
+    ];
+    //between 24 and 30
+    this.temp5 = [
+      'Struth.',
+      'Bloody oath.',
+      'Ripsnorter.'
+    ];
+    //between 31 and 38
+    this.temp6 = [
+      'Stinker.',
+      'Bad day to be an armpit.',
+      'Thongs and speedos out.'
+    ];
+    //above 38
+    this.temp7 = [
+      'Scorcher.',
+      'Good day for blowing the froth off a few.',
+      'Crikey.',
+      'Hotter than a shearer\'s armpit.'
+    ];
+
     this.pop1 = [
       'Set to be an absolute pearler of a day, mate.',
       'A bloody corker. Enjoy it.',
       'Can\'t get any better than this.',
-      'A beaut. Have at it, ya mug.',
+      'A beaut. Avago yer mug!',
       'No wuckin’ furries.',
       'She\'s gonna be a bloody ripper.',
       'Gonna be as dry as a dead dingo’s donga.'
@@ -37,9 +89,10 @@ export class PopArrays {
     this.pop5 = [
       'Might as well stay home and crack a tin.',
       'Fair dinkum, gonna be biblical.',
-      'Get on the turps, don;t bother goin\' out.',
+      'Get on the turps, don\'t bother goin\' out.',
       'Drownin\', deadset.',
-      'F*ck a duck.'
+      'F*ck a duck.',
+      'Raining cats and dogs.'
     ];
   }
 

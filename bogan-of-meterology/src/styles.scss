@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+$bg: #332f35;
+$fg: lighten($bg,20%);
+
+body {
+  background: $bg;
+  font-family: roboto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center; 
+  min-height: 100vh;
+}

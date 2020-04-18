@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PopArrays } from '../classes/pop-arrays';
-import { LowHighArrays } from '../classes/low-high';
+import { ConstArrays } from '../classes/const-arrays';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +12,13 @@ export class BoganService {
   pop4 = [];
   pop5 = [];
 
-  low = [];
-  high = [];
+  temp1 = [];
+  temp2 = [];
+  temp3 = [];
+  temp4 = [];
+  temp5 = [];
+  temp6 = [];
+  temp7 = [];
 
   constructor() {
     this.initialisePopArrays();
@@ -22,7 +26,7 @@ export class BoganService {
   }
 
   initialisePopArrays() {
-    let popArrays = new PopArrays();
+    let popArrays = new ConstArrays();
     this.pop1 = popArrays.pop1;
     this.pop2 = popArrays.pop2;
     this.pop3 = popArrays.pop3;
@@ -31,20 +35,43 @@ export class BoganService {
   }
 
   initialiseLowHighArrays() {
-    let lowHighArrays = new LowHighArrays();
-    // this.low = lowHighArrays.low;
-    // this.high = lowHighArrays.high;
+    let tempArrays = new ConstArrays();
+    this.temp1 = tempArrays.temp1;
+    this.temp2 = tempArrays.temp2;
+    this.temp3 = tempArrays.temp3;
+    this.temp4 = tempArrays.temp4;
+    this.temp5 = tempArrays.temp5;
+    this.temp6 = tempArrays.temp6;
+    this.temp7 = tempArrays.temp7;
   }
 
   boganise(resultsList: any) {
     for (var i = 0; i < resultsList.length; i++) {
       resultsList[i].boganisedPop = this.boganisePop(resultsList[i].pop);
-      //precis
-      //low - "{Low}. - Bit nippy etc..."
-      //high - "{High}. - Bit nippy etc..."
+      resultsList[i].boganisedAirTempMin = this.boganiseAirTemp(resultsList[i].airTempMin);
+      resultsList[i].boganisedAirTempMax = this.boganiseAirTemp(resultsList[i].airTempMax);
     }
     return resultsList;
   }
+
+  boganiseAirTemp(airTemp: any) {
+    if (airTemp <= 0) {
+      return this.getRandomChoice(this.temp1);
+    } else if (airTemp > 0 && airTemp <= 7) {
+      return this.getRandomChoice(this.temp2);
+    } else if (airTemp > 7 && airTemp <= 15) {
+      return this.getRandomChoice(this.temp3);
+    } else if (airTemp > 15 && airTemp <= 23) {
+      return this.getRandomChoice(this.temp4);
+    } else if (airTemp > 23 && airTemp <= 30) {
+      return this.getRandomChoice(this.temp5);
+    } else if (airTemp > 30 && airTemp <= 38) {
+      return this.getRandomChoice(this.temp6);
+    } else if (airTemp > 38) {
+      return this.getRandomChoice(this.temp7);
+    }
+  }
+
 
   boganisePop(pop: any) {
     let replacedPop = pop.replace('%','');
