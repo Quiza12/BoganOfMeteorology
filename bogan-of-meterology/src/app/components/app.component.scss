@@ -60,4 +60,19 @@ label + input[type=radio] + label {
    -webkit-appearance: none;
 }
 
+ul {
+  list-style-type: none;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.date-heading {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.daily-forecast {
+  text-align: center;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');

@@ -44,7 +44,12 @@ export class AppComponent implements OnInit {
   stateOptionChange() {
     this.setDisplayLocationListFlag(true);
     this.getDisplayLocationListFlag();
+
+    this.setDisplayDailyForecastFlag(false);
+    this.getDisplayDailyForecastFlag();
+
     this.getAllStateLocationLists();
+
     switch(this.stateOption) {
       case 'nsw': this.chosenLocationList = this.nswLocationList; break;
       case 'qld': this.chosenLocationList = this.qldLocationList; break;

@@ -24,20 +24,20 @@
 <div class="select-group">
   <div *ngIf="displayLocationList">
     <select class="styled-select" name="locationList" [(ngModel)]="chosenLocation" (change)="loadSevenDayForecast()">
-      <option value="" hidden>Choose town</option>
-      <option *ngFor="let location of chosenLocationList">{{location}}</option>
+      <option value="" selected hidden>Choose town</option>
+      <option *ngFor="let location of chosenLocationList" style='color: #332f35'>{{location}}</option>
     </select>
   </div>
 </div>
 
-<div>
+<div class="daily-forecast">
   <div *ngIf="displayDailyForecast">
     <ul *ngFor="let result of resultsArray; let i = index">
-      <li>{{result.date}}</li>
+      <li class="date-heading">{{result.date}}</li>
       <li>Summary: {{result.precis}}</li>
-      <li>Chance of rain: {{result.pop}} - {{result.boganisedPop}}</li>
       <li *ngIf="i != 0">Low: {{result.airTempMin}} - {{result.boganisedAirTempMin}}</li>
       <li *ngIf="i != 0">High: {{result.airTempMax}} - {{result.boganisedAirTempMax}}</li>
+      <li>Rain: {{result.pop}} - {{result.boganisedPop}}</li>
     </ul>
   </div>
 
