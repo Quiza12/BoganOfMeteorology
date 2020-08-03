@@ -65,7 +65,8 @@ export class ConstArrays {
       'A beaut. Avago yer mug!',
       'No wuckin’ furries.',
       'She\'s gonna be a bloody ripper.',
-      'Gonna be as dry as a dead dingo’s donga.'
+      'Gonna be as dry as a dead dingo’s donga.',
+      'Buckley\'s chance of rain.'
     ];
     this.pop2 = [
       'Might get a sprinkle. She\'ll be right.',
@@ -77,14 +78,16 @@ export class ConstArrays {
       'Take a brolly to be on the safe side.',
       'Yeah nah, yeah nah, yeah. Nah.',
       'Not gonna be the greatest day, but take what you can get.',
-      'Bit how ya going.'
+      'Bit how ya going.',
+      'Be acting the goat to go out without a brolly.'
     ];
     this.pop4 = [
       'It\'s gonna piss down.',
       'Wetter than wet.',
       'If you go out you\'ll come in lookin\' like a drowned rat.',
       'Won\'t kill ya, but you\'ll get wet.',
-      'Lookin\' real crook.'
+      'Lookin\' real crook.',
+      'Probably get the ute bogged.'
     ];
     this.pop5 = [
       'Might as well stay home and crack a tin.',
@@ -92,7 +95,9 @@ export class ConstArrays {
       'Get on the turps, don\'t bother goin\' out.',
       'Drownin\', deadset.',
       'F*ck a duck.',
-      'Raining cats and dogs.'
+      'Raining cats and dogs.',
+      'Wear some scunnos cause ya gonna be swimmin\'.',
+      'Tradie\'s holiday.'
     ];
   }
 
