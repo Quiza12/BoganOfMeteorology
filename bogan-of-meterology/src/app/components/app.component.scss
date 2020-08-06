@@ -47,6 +47,7 @@ label + input[type=radio] + label {
 .styled-select {
    background: transparent;
    text-align: center;
+   outline: none;
    width: 268px;
    height: 40px;
    margin-bottom: 20px;

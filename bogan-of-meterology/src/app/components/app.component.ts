@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BomDataService } from '../services/bom-data.service';
 import { BoganService } from '../services/bogan.service';
 import { LocationForecast } from '../classes/location-forecast';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ import { LocationForecast } from '../classes/location-forecast';
 })
 export class AppComponent implements OnInit {
   title = 'bogan-of-meterology';
+
+  dropdownDefault = 'Where the bloody hell are ya? ⬇'
 
   nswLocationList = [];
   ntLocationList = [];
@@ -28,20 +31,40 @@ export class AppComponent implements OnInit {
   stateOption: any;
   resultsArray = LocationForecast[''];
 
-  constructor(private bomDataService: BomDataService, private boganService: BoganService) {
+  locationSelectionForm: FormGroup;
+
+  constructor(private bomDataService: BomDataService, private boganService: BoganService, private fb: FormBuilder) {
     this.getDisplayDailyForecastFlag();
     this.getDisplayLocationListFlag();
   }
 
   ngOnInit() {
+    this.setFormToNull();
     this.getBomData();
+  }
+
+  setFormToNull() {
+    this.locationSelectionForm = this.fb.group({
+      locationFormControl: [null]
+    });
+  }
+
+  subscribeToFormChanges() {
+    this.locationSelectionForm.get("locationFormControl").valueChanges
+      .subscribe(f => {
+        this.chosenLocation = f;
+        this.loadSevenDayForecast();
+      })
   }
 
   getBomData() {
     this.bomDataService.getBomData();
+    this.subscribeToFormChanges();
   }
 
   stateOptionChange() {
+    this.setFormToNull();
+
     this.setDisplayLocationListFlag(true);
     this.getDisplayLocationListFlag();
 
@@ -59,6 +82,7 @@ export class AppComponent implements OnInit {
       case 'wa': this.chosenLocationList = this.waLocationList; break;
       case 'vic': this.chosenLocationList = this.vicLocationList; break;
     }
+    this.subscribeToFormChanges();
   }
 
   getAllStateLocationLists() {

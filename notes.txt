@@ -30,8 +30,12 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - Low and high randomised options - maybe add more later.
   - TODO - Precis POC.
   - DONE - Styling - state options and page theme.
-  - TODO - Styling - select box.
+  - DONE - Styling - select box.
+  - DONE - Select box - no highlight around it.
+  - TODO - Fix "Choose town" not displaying after first load or reload.
+  - DONE - Emojis for result lines.
 
+https://www.tektutorialshub.com/angular/select-options-example-in-angular/
 
 Cheers to:
   https://codepen.io/magnificode/pen/ojYJJP/
@@ -44,5 +48,3 @@ http://www.wanowandthen.com/slang.html
 
 
 Select all empty lines to delete: ^(?:[\t ]*(?:\r?\n|\r))+
-
-Idea for the search: big search bar with "Where the bloody hell are ya?"

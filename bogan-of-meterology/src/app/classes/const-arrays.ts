@@ -24,7 +24,8 @@ export class ConstArrays {
     this.temp2 = [
       'Not nipple friendly.',
       'Crook.',
-      'Brass monkey weather.'
+      'Brass monkey weather.',
+      'On the nipple-o-meter.'
     ];
     //between 8 and 15
     this.temp3 = [
