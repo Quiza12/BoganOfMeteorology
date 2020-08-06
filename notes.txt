@@ -32,7 +32,7 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - Styling - state options and page theme.
   - DONE - Styling - select box.
   - DONE - Select box - no highlight around it.
-  - TODO - Fix "Choose town" not displaying after first load or reload.
+  - DONE - Fix "Choose town" not displaying after first load or reload.
   - DONE - Emojis for result lines.
 
 https://www.tektutorialshub.com/angular/select-options-example-in-angular/
