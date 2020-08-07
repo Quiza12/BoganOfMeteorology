@@ -27,13 +27,13 @@ export class ConstArrays {
       'Brass monkey weather.',
       'On the nipple-o-meter.'
     ];
-    //between 8 and 15
+    //between 8 and 16
     this.temp3 = [
       'Bit chilly.',
       'Crack out the tracky dacks.',
       'Bit nippy.'
     ];
-    //between 16 and 23
+    //between 17 and 23
     this.temp4 = [
       'Beaut.',
       'Ripper.',
@@ -67,7 +67,7 @@ export class ConstArrays {
       'No wuckin’ furries.',
       'She\'s gonna be a bloody ripper.',
       'Gonna be as dry as a dead dingo’s donga.',
-      'Buckley\'s chance of rain.'
+      'Buckley\'s chance.'
     ];
     this.pop2 = [
       'Might get a sprinkle. She\'ll be right.',

@@ -59,9 +59,9 @@ export class BoganService {
       return this.getRandomChoice(this.temp1);
     } else if (airTemp > 0 && airTemp <= 7) {
       return this.getRandomChoice(this.temp2);
-    } else if (airTemp > 7 && airTemp <= 15) {
+    } else if (airTemp > 7 && airTemp <= 16) {
       return this.getRandomChoice(this.temp3);
-    } else if (airTemp > 15 && airTemp <= 23) {
+    } else if (airTemp > 16 && airTemp <= 23) {
       return this.getRandomChoice(this.temp4);
     } else if (airTemp > 23 && airTemp <= 30) {
       return this.getRandomChoice(this.temp5);

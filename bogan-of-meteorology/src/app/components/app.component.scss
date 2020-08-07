@@ -3,8 +3,13 @@ $fg: lighten($bg,20%);
 $fg2: lighten($bg,40%);
 $borderWidth: 3px;
 
-h1, li {
+h1, li, a {
   color: white;
+}
+
+h4, a {
+  color: #ccc8ce;
+  margin-bottom: 5px;
 }
 
 input[type=radio] {
@@ -12,12 +17,6 @@ input[type=radio] {
   visibility: hidden;
   display: none;
 }
-
-// input[type=select] {
-//   position: absolute;
-//   visibility: hidden;
-//   display: none;
-// }
 
 label {
   color: lighten($bg,40%);
