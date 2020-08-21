@@ -36,7 +36,7 @@
   <div *ngIf="displayDailyForecast">
     <ul *ngFor="let result of resultsArray; let i = index">
       <li class="date-heading">{{result.date}}</li>
-      <li>Summary 📝: {{result.precis}}</li>
+      <li>Summary 📝: {{result.boganisedPrecis}}</li>
       <li *ngIf="i != 0">Low 🔽: {{result.airTempMin}} - {{result.boganisedAirTempMin}}</li>
       <li *ngIf="i != 0">High ⬆️: {{result.airTempMax}} - {{result.boganisedAirTempMax}}</li>
       <li>Rain 🌧️: {{result.pop}} - {{result.boganisedPop}}</li>

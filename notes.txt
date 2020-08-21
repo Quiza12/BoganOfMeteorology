@@ -28,12 +28,12 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - Do chance of rain for POC.
   - DONE - Expand POC - do randomised option.
   - DONE - Low and high randomised options - maybe add more later.
-  - TODO - Precis POC.
   - DONE - Styling - state options and page theme.
   - DONE - Styling - select box.
   - DONE - Select box - no highlight around it.
   - DONE - Fix "Choose town" not displaying after first load or reload.
   - DONE - Emojis for result lines.
+  - TODO - Precis POC.
 
 https://www.tektutorialshub.com/angular/select-options-example-in-angular/
 

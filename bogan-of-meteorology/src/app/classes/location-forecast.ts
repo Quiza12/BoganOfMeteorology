@@ -2,7 +2,7 @@ export class LocationForecast {
   locationName: string;
   date: string;
   precis: string;
-  bognaisedPrecis: string;
+  boganisedPrecis: string;
   pop: string;
   boganisedPop: string;
   airTempMin: string;
@@ -29,7 +29,7 @@ export class LocationForecast {
       this.locationName = locationName;
       this.date = date;
       this.precis = precis;
-      this.bognaisedPrecis = boganisedPrecis;
+      this.boganisedPrecis = boganisedPrecis;
       this.pop = pop;
       this.boganisedPop = boganisedPop;
       this.airTempMin = airTempMin;

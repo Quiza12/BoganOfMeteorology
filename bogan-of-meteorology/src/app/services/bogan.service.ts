@@ -20,9 +20,12 @@ export class BoganService {
   temp6 = [];
   temp7 = [];
 
+  precisMap = new Map();
+
   constructor() {
     this.initialisePopArrays();
     this.initialiseLowHighArrays();
+    this.initialisePrecisMap();
   }
 
   initialisePopArrays() {
@@ -45,11 +48,17 @@ export class BoganService {
     this.temp7 = tempArrays.temp7;
   }
 
+  initialisePrecisMap() {
+    let constArrays = new ConstArrays();
+    this.precisMap = constArrays.precisMap;
+  }
+
   boganise(resultsList: any) {
     for (var i = 0; i < resultsList.length; i++) {
       resultsList[i].boganisedPop = this.boganisePop(resultsList[i].pop);
       resultsList[i].boganisedAirTempMin = this.boganiseAirTemp(resultsList[i].airTempMin);
       resultsList[i].boganisedAirTempMax = this.boganiseAirTemp(resultsList[i].airTempMax);
+      resultsList[i].boganisedPrecis = this.boganisePrecis(resultsList[i].precis);
     }
     return resultsList;
   }
@@ -72,7 +81,6 @@ export class BoganService {
     }
   }
 
-
   boganisePop(pop: any) {
     let replacedPop = pop.replace('%','');
     replacedPop = Number(replacedPop);
@@ -89,10 +97,26 @@ export class BoganService {
     }
   }
 
-  getRandomChoice(array) {
-    return array[Math.floor(Math.random() * array.length)];
+  boganisePrecis(precis: any) {
+    var newPrecis = new String;
+    newPrecis = precis;
+    this.precisMap.forEach((value: string, key: string) => {
+      if (precis.toLowerCase().includes(key)) {
+        newPrecis = newPrecis.toLowerCase().replace(key, value);
+      }
+    });
+    return this.makeSentenceCase(newPrecis);
   }
 
+  makeSentenceCase(precis: String) {
+    if (precis.includes('.')) {
+      precis = precis[0].toUpperCase() + precis.slice(1)
+    }
+    return precis[0].toUpperCase() + precis.slice(1);
+  }
 
+  getRandomChoice(array: any) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
 }

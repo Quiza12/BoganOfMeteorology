@@ -13,6 +13,27 @@ export class ConstArrays {
   temp6 = [];
   temp7 = [];
 
+  precisMap = new Map([
+    //Precis
+    ["afternoon", "arvo"],
+    ["morning", "morn"],
+    ["partly", "yeah gonna be a bit"],
+    ["thunderstorm", "thundastorm"],
+    ["very high", "bloody big"],
+    ["high", "lotta"],
+    ["light winds", "pissy breeze"],
+    ["km/h", "kays an hour"],
+    ["evening", "eve"],
+    ["clear", "clear as glass"],
+    ["very windy", "blowin' a gale"],
+    ["rain", "Jesus' piss"],
+    ["showers", "pissin'"],
+    ["shower", "piss"],
+    ["windy", "blowin' a gale"],
+    ["sunny", "crack out the sunnies"],
+    ["mostly", "reckon"]
+  ]);
+
   constructor() {
     //0 and under
     this.temp1 = [
@@ -41,9 +62,10 @@ export class ConstArrays {
     ];
     //between 24 and 30
     this.temp5 = [
-      'Struth.',
+      'Strewth.',
       'Bloody oath.',
-      'Ripsnorter.'
+      'Ripsnorter.',
+      'Grouse.'
     ];
     //between 31 and 38
     this.temp6 = [
@@ -59,20 +81,23 @@ export class ConstArrays {
       'Hotter than a shearer\'s armpit.'
     ];
 
+    //Pop
     this.pop1 = [
       'Set to be an absolute pearler of a day, mate.',
       'A bloody corker. Enjoy it.',
       'Can\'t get any better than this.',
       'A beaut. Avago yer mug!',
-      'No wuckin’ furries.',
+      'Gonna be as dry as a dead roo in the Nullabor.',
       'She\'s gonna be a bloody ripper.',
       'Gonna be as dry as a dead dingo’s donga.',
-      'Buckley\'s chance.'
+      'Buckley\'s chance.',
+      'Nun\'s nasty.'
     ];
     this.pop2 = [
       'Might get a sprinkle. She\'ll be right.',
       'Expect a little tinkle on the tin roof.',
       'Suss it out, but should be right.',
+      'No wuckin’ furries.',
       'Sprinkle here and there, so don\'t carry on like a porkchop when you say I didn\'t tell ya.'
     ];
     this.pop3 = [
@@ -98,9 +123,10 @@ export class ConstArrays {
       'F*ck a duck.',
       'Raining cats and dogs.',
       'Wear some scunnos cause ya gonna be swimmin\'.',
-      'Tradie\'s holiday.'
+      'Tradie\'s holiday.',
+      "BYO gumboots."
     ];
-  }
 
+  }
 
 }
