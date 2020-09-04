@@ -21,7 +21,6 @@ export class ConstArrays {
     ["thunderstorm", "thundastorm"],
     ["very high", "bloody big"],
     ["high", "lotta"],
-    ["light winds", "pissy breeze"],
     ["km/h", "kays an hour"],
     ["evening", "eve"],
     ["clear", "clear as glass"],
@@ -31,7 +30,10 @@ export class ConstArrays {
     ["shower", "piss"],
     ["windy", "blowin' a gale"],
     ["sunny", "crack out the sunnies"],
-    ["mostly", "reckon"]
+    ["mostly", "reckon"],
+    ["light", "bugger all"],
+    ["easing", "buggering off"]
+
   ]);
 
   constructor() {
