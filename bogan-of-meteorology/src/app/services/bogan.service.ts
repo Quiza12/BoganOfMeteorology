@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ConstArrays } from '../classes/const-arrays';
+import { ConstArrays } from './const-arrays.service';
 
 @Injectable({
   providedIn: 'root'
@@ -109,10 +109,17 @@ export class BoganService {
   }
 
   makeSentenceCase(precis: String) {
-    if (precis.includes('.')) {
-      precis = precis[0].toUpperCase() + precis.slice(1)
-    }
-    return precis[0].toUpperCase() + precis.slice(1);
+    var newPrecis = '';
+    var splitPrecis = precis.split(".");
+      for (var i = 0; i < splitPrecis.length - 1; i++) {
+        if (splitPrecis[i].charAt(0) == ' ') {
+          newPrecis = newPrecis + ' ' + splitPrecis[i].charAt(1).toUpperCase() + splitPrecis[i].substring(2, splitPrecis[i].length) + '.';
+        } else {
+          newPrecis = newPrecis + splitPrecis[i].charAt(0).toUpperCase() + splitPrecis[i].substring(1, splitPrecis[i].length) + '.';
+        }
+
+      }
+    return newPrecis;
   }
 
   getRandomChoice(array: any) {

@@ -17,12 +17,12 @@ export class ConstArrays {
     //Precis
     ["afternoon", "arvo"],
     ["morning", "morn"],
-    ["partly", "yeah gonna be a bit"],
+    ["partly", "yeah, gonna be a little bit"],
     ["thunderstorm", "thundastorm"],
     ["very high", "bloody big"],
     ["high", "lotta"],
     ["km/h", "kays an hour"],
-    ["evening", "eve"],
+    ["evening", "evenin\'"],
     ["clear", "clear as glass"],
     ["very windy", "blowin' a gale"],
     ["rain", "Jesus' piss"],
@@ -67,20 +67,23 @@ export class ConstArrays {
       'Strewth.',
       'Bloody oath.',
       'Ripsnorter.',
-      'Grouse.'
+      'Grouse.',
+      'Good day for blowing the froth off a few.'
     ];
     //between 31 and 38
     this.temp6 = [
-      'Stinker.',
+      'Scorcher.',
       'Bad day to be an armpit.',
-      'Thongs and speedos out.'
+      'Thongs and speedos out.',
+      'She\'s not cold, that\'s for sure.',
+      'Jeez the sun\'s got some bloody bite.'
     ];
     //above 38
     this.temp7 = [
-      'Scorcher.',
-      'Good day for blowing the froth off a few.',
+      'Stinker.',
       'Crikey.',
-      'Hotter than a shearer\'s armpit.'
+      'Hotter than a shearer\'s armpit.',
+      'Big risk of carkin\' it.'
     ];
 
     //Pop
