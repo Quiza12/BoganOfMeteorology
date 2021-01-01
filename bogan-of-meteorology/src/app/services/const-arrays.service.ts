@@ -17,7 +17,7 @@ export class ConstArrays {
     //Precis
     ["afternoon", "arvo"],
     ["morning", "morn"],
-    ["partly", "yeah, gonna be a little bit"],
+    ["partly", "gonna be a bit"],
     ["thunderstorm", "thundastorm"],
     ["very high", "bloody big"],
     ["high", "lotta"],
@@ -60,7 +60,9 @@ export class ConstArrays {
     this.temp4 = [
       'Beaut.',
       'Ripper.',
-      'Bonza.'
+      'Bonza.',
+      'Cracka.',
+      'Bloody beaut.'
     ];
     //between 24 and 30
     this.temp5 = [
@@ -68,6 +70,8 @@ export class ConstArrays {
       'Bloody oath.',
       'Ripsnorter.',
       'Grouse.',
+      'Bees knees.',
+      'Best thing since sliced bread.',
       'Good day for blowing the froth off a few.'
     ];
     //between 31 and 38
@@ -83,7 +87,8 @@ export class ConstArrays {
       'Stinker.',
       'Crikey.',
       'Hotter than a shearer\'s armpit.',
-      'Big risk of carkin\' it.'
+      'Big risk of carkin\' it.',
+      'Just pull up stumps.'
     ];
 
     //Pop
@@ -110,7 +115,9 @@ export class ConstArrays {
       'Yeah nah, yeah nah, yeah. Nah.',
       'Not gonna be the greatest day, but take what you can get.',
       'Bit how ya going.',
-      'Be acting the goat to go out without a brolly.'
+      'Be acting the goat to go out without a brolly.',
+      'Send \'er down, Hughie!',
+      'Adam\'s ale\'s coming.'
     ];
     this.pop4 = [
       'It\'s gonna piss down.',
@@ -118,7 +125,8 @@ export class ConstArrays {
       'If you go out you\'ll come in lookin\' like a drowned rat.',
       'Won\'t kill ya, but you\'ll get wet.',
       'Lookin\' real crook.',
-      'Probably get the ute bogged.'
+      'Probably get the ute bogged.',
+      'Better get the rags off the hills hoist.'
     ];
     this.pop5 = [
       'Might as well stay home and crack a tin.',
@@ -126,10 +134,11 @@ export class ConstArrays {
       'Get on the turps, don\'t bother goin\' out.',
       'Drownin\', deadset.',
       'F*ck a duck.',
-      'Raining cats and dogs.',
       'Wear some scunnos cause ya gonna be swimmin\'.',
       'Tradie\'s holiday.',
-      "BYO gumboots."
+      'BYO gumboots.',
+      'Pelting down.',
+      'Bucketing down.'
     ];
 
   }
