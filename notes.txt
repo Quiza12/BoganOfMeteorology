@@ -33,7 +33,10 @@ http://www.bom.gov.au/fwo/IDW14199.xml - WA
   - DONE - Select box - no highlight around it.
   - DONE - Fix "Choose town" not displaying after first load or reload.
   - DONE - Emojis for result lines.
-  - TODO - Precis POC.
+  - DONE - Precis POC.
+  - DONE - Spin up about component.
+  - DONE - Routing.
+  - DONE - Fill out About page details.
 
 https://www.tektutorialshub.com/angular/select-options-example-in-angular/
 
@@ -45,6 +48,7 @@ ng serve --open
 https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
 https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch/
 http://www.wanowandthen.com/slang.html
+https://slll.cass.anu.edu.au/centres/andc/meanings-origins/all
 
 
 Select all empty lines to delete: ^(?:[\t ]*(?:\r?\n|\r))+

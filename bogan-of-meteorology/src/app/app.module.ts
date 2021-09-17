@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { BomDataService } from './services/bom-data.service';
 import { BoganService } from './services/bogan.service';
+import { AboutComponent } from './about/about.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { BoganService } from './services/bogan.service';
     ReactiveFormsModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    MainComponent
   ],
   providers: [
     BomDataService,
@@ -27,7 +31,7 @@ import { BoganService } from './services/bogan.service';
     HttpClientModule
   ],
   bootstrap: [
-    AppComponent
+    MainComponent
   ]
 })
 export class AppModule { }

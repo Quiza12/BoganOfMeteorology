@@ -16,30 +16,30 @@ export class ConstArrays {
   precisMap = new Map([
     //Precis
     ["afternoon", "arvo"],
-    ["morning", "morn"],
+    ["morning", "mornin'"],
     ["partly", "gonna be a bit"],
-    ["thunderstorm", "thundastorm"],
+    ["thunderstorm", "loud sky bastard"],
     ["very high", "bloody big"],
     ["high", "lotta"],
     ["km/h", "kays an hour"],
     ["evening", "evenin\'"],
     ["clear", "clear as glass"],
     ["very windy", "blowin' a gale"],
-    ["rain", "Jesus' piss"],
-    ["showers", "pissin'"],
-    ["shower", "piss"],
+    ["rain", "Hughie's sendin' it down"],
+    ["showers", "lotsa bloody rain"],
+    ["shower", "bitta rain"],
     ["windy", "blowin' a gale"],
-    ["sunny", "crack out the sunnies"],
+    ["sunny", "sunny. bloody oath"],
     ["mostly", "reckon"],
     ["light", "bugger all"],
-    ["easing", "buggering off"]
-
+    ["easing", "buggering off"],
+    ["possible", "might be"]
   ]);
 
   constructor() {
     //0 and under
     this.temp1 = [
-      'F*cking freezing.',
+      'F*ckin\' freezing.',
       'Christ on a bike.',
       'Absolutely crook.'
     ];
@@ -70,7 +70,6 @@ export class ConstArrays {
       'Bloody oath.',
       'Ripsnorter.',
       'Grouse.',
-      'Bees knees.',
       'Best thing since sliced bread.',
       'Good day for blowing the froth off a few.'
     ];
