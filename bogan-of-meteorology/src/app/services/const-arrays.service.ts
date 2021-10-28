@@ -16,7 +16,7 @@ export class ConstArrays {
   precisMap = new Map([
     //Precis
     ["afternoon", "arvo"],
-    ["morning", "mornin'"],
+    ["morning", "mornin\'"],
     ["partly", "gonna be a bit"],
     ["thunderstorm", "loud sky bastard"],
     ["very high", "bloody big"],
@@ -28,7 +28,8 @@ export class ConstArrays {
     ["rain", "Hughie's sendin' it down"],
     ["showers", "lotsa bloody rain"],
     ["shower", "bitta rain"],
-    ["windy", "blowin' a gale"],
+    ["windy", "bloody breezy"],
+    ["breeze", "quokka fart"],
     ["sunny", "sunny. bloody oath"],
     ["mostly", "reckon"],
     ["light", "bugger all"],
@@ -48,7 +49,7 @@ export class ConstArrays {
       'Not nipple friendly.',
       'Crook.',
       'Brass monkey weather.',
-      'On the nipple-o-meter.'
+      'She\'s a bit pointy.'
     ];
     //between 8 and 16
     this.temp3 = [
@@ -77,7 +78,7 @@ export class ConstArrays {
     this.temp6 = [
       'Scorcher.',
       'Bad day to be an armpit.',
-      'Thongs and speedos out.',
+      'Thongs and togs out.',
       'She\'s not cold, that\'s for sure.',
       'Jeez the sun\'s got some bloody bite.'
     ];
@@ -137,7 +138,8 @@ export class ConstArrays {
       'Tradie\'s holiday.',
       'BYO gumboots.',
       'Pelting down.',
-      'Bucketing down.'
+      'Bucketing down.',
+      'It\'s gonna be a gully-washa.'
     ];
 
   }

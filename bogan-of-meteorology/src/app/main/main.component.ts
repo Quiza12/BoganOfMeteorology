@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../components/app.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'main-root',
@@ -8,9 +9,22 @@ import { AppComponent } from '../components/app.component';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  appPageShowing: boolean;
 
-  ngOnInit() {
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
+        this.determinePage(event.url);
+    });
+  }
+
+  determinePage(url:String): void {
+    if (url == "/app") {
+      this.appPageShowing = true;
+    } else {
+      this.appPageShowing = false;
+    }
   }
 
 }
