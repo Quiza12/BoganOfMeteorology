@@ -9,7 +9,7 @@ import * as moment from 'moment';
 })
 export class BomDataService {
 
-  private apiExtension = 'http://www.bom.gov.au/fwo/';
+  private apiExtension = 'https://reg.bom.gov.au/fwo/';
 
   private nswExtension = 'IDN11060.xml';
   private ntExtension = 'IDD10207.xml';
