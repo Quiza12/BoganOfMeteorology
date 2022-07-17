@@ -3,15 +3,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LocationForecast } from '../classes/location-forecast';
 import xml2js from 'xml2js';
 import * as moment from 'moment';
+import { BlobServiceClient } from "@azure/storage-blob";
+import { environment } from '../../environments/environment';
+
+const account = "mqbomstorageaccount";
+const sas = "sp=r&st=2022-07-17T06:36:34Z&se=2022-07-17T14:36:34Z&spr=https&sv=2021-06-08&sr=c&sig=uGki%2FlD0BOyfsLqXZanwUBOxcf4ccSrbKXTnQ3Vmjhk%3D";
+
+const blobServiceClient = new BlobServiceClient('https://' + account + '.blob.core.windows.net/bom?' + environment.azureSas);
 
 @Injectable({
   providedIn: 'root'
 })
 export class BomDataService {
 
-  private apiExtension = 'https://reg.bom.gov.au/fwo/';
-
-  private nswExtension = 'IDN11060.xml';
+  private nswExtension = "IDN11060.xml";
   private ntExtension = 'IDD10207.xml';
   private qldExtension = 'IDQ11295.xml';
   private saExtension = 'IDS10044.xml';
@@ -54,39 +59,43 @@ export class BomDataService {
   getWaResultsForDisplay() { return this.waResultsArray; }
 
   getBomData() {
-    this.retrieveData(this.nswExtension, this.nswXml, this.nswResultsArray);
-    this.retrieveData(this.ntExtension, this.ntXml, this.ntResultsArray);
-    this.retrieveData(this.qldExtension, this.qldXml, this.qldResultsArray);
-    this.retrieveData(this.saExtension, this.saXml, this.saResultsArray);
-    this.retrieveData(this.tasExtension, this.tasXml, this.tasResultsArray);
-    this.retrieveData(this.vicExtension, this.vicXml, this.vicResultsArray);
-    this.retrieveData(this.waExtension, this.waXml, this.waResultsArray);
+    this.retrieveDataFromAzure(this.nswExtension, this.nswXml, this.nswResultsArray);
+    this.retrieveDataFromAzure(this.ntExtension, this.ntXml, this.ntResultsArray);
+    this.retrieveDataFromAzure(this.qldExtension, this.qldXml, this.qldResultsArray);
+    this.retrieveDataFromAzure(this.saExtension, this.saXml, this.saResultsArray);
+    this.retrieveDataFromAzure(this.tasExtension, this.tasXml, this.tasResultsArray);
+    this.retrieveDataFromAzure(this.vicExtension, this.vicXml, this.vicResultsArray);
+    this.retrieveDataFromAzure(this.waExtension, this.waXml, this.waResultsArray);
   }
 
-  retrieveData(url: any, xml: any, resultsArray: any) {
-    const headers = new HttpHeaders({
-        'User-Agent' : 'request',
-        'Accept' : 'application/xml',
-        'Access-Control-Allow-Origin' : 'http://www.bom.gov.au',
-        'Access-Control-Allow-Methods' : 'GET',
-        'Access-Control-Allow-Headers' : 'Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method'
-    });
-    const responseType = 'text' as 'text';
-    let errorMessage = '';
+  async retrieveDataFromAzure(url: any, xml: string, resultsArray: any) {
+    let rawXmlString: any;
 
-    this.http.get(this.apiExtension + url, {
-      headers,
-      responseType
-    }).subscribe((response) => {
-        xml = response;
-        var parseString = xml2js.parseString;
-        parseString(xml, (err:any, result:any) => {
-            this.loopResults(result, resultsArray);
-        });
-      },
-      (error) => {
-        errorMessage = error.message;
-        console.log(errorMessage);
+    const containerClient = blobServiceClient.getContainerClient("");
+    const blobClient = containerClient.getBlobClient(url);
+
+    // Get blob content from position 0 to the end
+    // In browsers, get downloaded data by accessing downloadBlockBlobResponse.blobBody
+    const downloadBlockBlobResponse = await blobClient.download();
+    await blobToString(await downloadBlockBlobResponse.blobBody);
+
+    // [Browsers only] A helper method used to convert a browser Blob into string.
+    async function blobToString(blob: any) {
+      const fileReader = new FileReader();
+      return new Promise((resolve, reject) => {
+        fileReader.onloadend = (ev) => {
+          const eventTarget = fileReader.result;
+          resolve(eventTarget);
+          rawXmlString = eventTarget;
+        };
+        fileReader.onerror = reject;
+        rawXmlString = fileReader.readAsText(blob);
+      });
+    }
+    var parseString = xml2js.parseString;
+    parseString(rawXmlString, (err:any, result:any) => {
+        if (err) console.log(err);
+        this.loopResults(result, resultsArray);
     });
   }
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import {enableProdMode} from '@angular/core';
+
+enableProdMode();
 
 @Component({
   selector: 'main-root',
@@ -20,7 +23,7 @@ export class MainComponent implements OnInit {
   }
 
   determinePage(url:String): void {
-    if (url == "/app") {
+    if (url == "/app" || url == "/" ) {
       this.appPageShowing = true;
     } else {
       this.appPageShowing = false;
