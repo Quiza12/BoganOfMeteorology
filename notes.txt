@@ -44,6 +44,7 @@ Cheers to:
   https://codepen.io/magnificode/pen/ojYJJP/
 
 ng serve --open
+npm start
 
 https://codecraft.tv/courses/angular/quickstart/nesting-components-and-inputs/
 https://appdividend.com/2018/01/28/angular-input-output-tutorial-example-scratch/
