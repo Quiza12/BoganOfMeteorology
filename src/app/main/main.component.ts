@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import {enableProdMode} from '@angular/core';
+import { enableProdMode } from '@angular/core';
 
 enableProdMode();
 
