@@ -6,6 +6,7 @@ import { AppComponent } from './components/app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import { BomDataService } from './services/bom-data.service';
 import { BoganService } from './services/bogan.service';
@@ -28,7 +29,8 @@ import { MainComponent } from './main/main.component';
   providers: [
     BomDataService,
     BoganService,
-    HttpClientModule
+    HttpClientModule,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [
     MainComponent
