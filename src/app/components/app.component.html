@@ -33,8 +33,8 @@
     <ul *ngFor="let result of resultsArray; let i = index">
       <li class="date-heading">{{result.date}}</li>
       <li>📝 Summary: {{result.boganisedPrecis}}</li>
-      <li *ngIf="i != 0">⬇️ Low: {{result.airTempMin}} - {{result.boganisedAirTempMin}}</li>
       <li *ngIf="i != 0">⬆️ High: {{result.airTempMax}} - {{result.boganisedAirTempMax}}</li>
+      <li *ngIf="i != 0">⬇️ Low: {{result.airTempMin}} - {{result.boganisedAirTempMin}}</li>
       <li>🌧️ Rai️n: {{result.pop}} - {{result.boganisedPop}}</li>
     </ul>
   </div>
