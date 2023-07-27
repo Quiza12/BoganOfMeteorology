@@ -75,4 +75,18 @@ ul {
   text-align: center;
 }
 
+@media screen and (max-width: 750px) {
+
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  label + input[type=radio] + label {
+    border-left: none;
+    border-top: solid $borderWidth $fg;
+  }
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
