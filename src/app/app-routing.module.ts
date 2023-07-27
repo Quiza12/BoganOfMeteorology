@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { AppComponent } from './components/app.component';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'app', pathMatch: 'full' }, 
   { path: '/app', redirectTo: 'app', pathMatch: 'full' }, 
