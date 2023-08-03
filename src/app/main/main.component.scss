@@ -14,6 +14,7 @@ h1, li, a {
 h4, a {
   color: #ccc8ce;
   margin-bottom: 5px;
+  display: inline;
 }
 
 input[type=radio] {
@@ -77,6 +78,16 @@ ul {
 
 .daily-forecast {
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  
+  h4, a {
+    color: #ccc8ce;
+    margin-bottom: 5px;
+    display: block;
+  }
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');

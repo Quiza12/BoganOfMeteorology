@@ -97,9 +97,9 @@ export class ConstArrays {
       'A bloody corker. Enjoy it.',
       'Can\'t get any better than this.',
       'A beaut. Avago yer mug!',
-      'Gonna be as dry as a dead roo in the Nullabor.',
+      'Gunna be as dry as a dead roo in the Nullabor.',
       'She\'s gonna be a bloody ripper.',
-      'Gonna be as dry as a dead dingo’s donga.',
+      'Gunna be as dry as a dead dingo’s donga.',
       'Buckley\'s chance.',
       'Nun\'s nasty.'
     ];
@@ -120,7 +120,7 @@ export class ConstArrays {
       'Adam\'s ale\'s coming.'
     ];
     this.pop4 = [
-      'It\'s gonna piss down.',
+      'Gunna piss down.',
       'Wetter than wet.',
       'If you go out you\'ll come in lookin\' like a drowned rat.',
       'Won\'t kill ya, but you\'ll get wet.',

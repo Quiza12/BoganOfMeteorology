@@ -133,7 +133,7 @@ export class BomDataService {
   }
 
   getPrettyDate(date: any, locationForecast: any) {
-    locationForecast.date = moment(date).format("dddd, D MMMM");
+    locationForecast.date = moment(date).format("dddd, MMMM D ");
   }
 
   getAirTempAndPrecipRange(elementsArray: any, locationForcast: any) {
