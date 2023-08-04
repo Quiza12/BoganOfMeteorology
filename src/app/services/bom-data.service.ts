@@ -123,7 +123,7 @@ export class BomDataService {
         this.getAirTempAndPrecipRange(forecastArray[i].element, locationForecast);
         this.getPrecisAndPoP(forecastArray[i].text, locationForecast);
       } else {
-        locationForecast.date = 'Forecast for rest of ' + moment(forecastArray[i].$['start-time-local']).format("dddd");
+        locationForecast.date = 'Forecast for rest of ' + this.getBoganisedDay(moment(forecastArray[i].$['start-time-local']).format("dddd"));
         this.getAirTempAndPrecipRange(forecastArray[i].element, locationForecast);
         this.getPrecisAndPoP(forecastArray[i].text, locationForecast);
       }
