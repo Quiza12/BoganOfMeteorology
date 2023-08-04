@@ -1,3 +1,5 @@
+import { HotObservable } from "rxjs/internal/testing/HotObservable";
+
 export class ConstArrays {
   pop1 = [];
   pop2 = [];
@@ -80,7 +82,8 @@ export class ConstArrays {
       'Bad day to be an armpit.',
       'Thongs and togs out.',
       'She\'s not cold, that\'s for sure.',
-      'Jeez the sun\'s got some bloody bite.'
+      'Jeez the sun\'s got some bloody bite.',
+      'It\'s faaaaarkin\' hot.'
     ];
     //above 38
     this.temp7 = [
@@ -88,7 +91,8 @@ export class ConstArrays {
       'Crikey.',
       'Hotter than a shearer\'s armpit.',
       'Big risk of carkin\' it.',
-      'Just pull up stumps.'
+      'Just pull up stumps.',
+      'It\'s faaaaaaaaaaarkin\' hot.'
     ];
 
     //Pop

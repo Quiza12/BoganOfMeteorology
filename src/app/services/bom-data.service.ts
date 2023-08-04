@@ -133,7 +133,21 @@ export class BomDataService {
   }
 
   getPrettyDate(date: any, locationForecast: any) {
-    locationForecast.date = moment(date).format("dddd, MMMM D ");
+    let day = this.getBoganisedDay(moment(date).format("dddd"));
+    locationForecast.date = day + ", " + moment(date).format("MMMM D ");
+  }
+
+  getBoganisedDay(day: string) {
+    switch(day) {
+      case "Monday" : return "Mondee"; 
+      case "Tuesday" : return"Tuesdee"; 
+      case "Wednesday" : return "Wensdee"; 
+      case "Thursday" : return "Thursdee"; 
+      case "Friday" : return "Fridee"; 
+      case "Saturday" : return "Satdee"; 
+      case "Sunday" : return "Sundee"; 
+      default: return day; 
+    }
   }
 
   getAirTempAndPrecipRange(elementsArray: any, locationForcast: any) {
