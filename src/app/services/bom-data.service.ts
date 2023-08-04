@@ -140,7 +140,7 @@ export class BomDataService {
   getBoganisedDay(day: string) {
     switch(day) {
       case "Monday" : return "Mondee"; 
-      case "Tuesday" : return"Tuesdee"; 
+      case "Tuesday" : return "Tuesdee"; 
       case "Wednesday" : return "Wensdee"; 
       case "Thursday" : return "Thursdee"; 
       case "Friday" : return "Fridee"; 
